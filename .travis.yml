@@ -7,13 +7,15 @@ branches:
   only:
   - master
 
-before_install:
-
-
 install:
+  - npm install -g firebase-tools
   - npm install -g --silent @angular/cli # install angular cli
   - npm install #install all dependencies
 
 script:
   - ng lint
   - ng build --prod
+
+after_success:
+  - firebase deploy --token "$FIREBASE_TOKEN"
+
