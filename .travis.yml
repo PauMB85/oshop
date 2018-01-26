@@ -16,5 +16,5 @@ install:
 
 script:
   - ng lint
-  - echo "This is a envirioment: $HELLO"
+  - echo "This is a environment: $HELLO"
   - ng build --prod
