@@ -12,8 +12,10 @@ install:
   - npm install -g --silent @angular/cli # install angular cli
   - npm install #install all dependencies
 
-script:
+before_script:
   - ng lint
+
+script:
   - ng build --prod
 
 after_success:
