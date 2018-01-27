@@ -1,6 +1,7 @@
 # Oshp
 
 [![Build Status](https://travis-ci.org/PauMB85/oshop.svg?branch=master)](https://travis-ci.org/PauMB85/oshop)
+[![GitHub release](https://img.shields.io/github/release/PauMB85/oshop.svg)]()
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
