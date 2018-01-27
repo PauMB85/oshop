@@ -20,6 +20,7 @@ import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orde
 import {AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import {AuthService} from './services/auth.service';
+import {AuthGuardService} from './services/auth-guard.service';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {AuthService} from './services/auth.service';
     NgbModule.forRoot()
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
