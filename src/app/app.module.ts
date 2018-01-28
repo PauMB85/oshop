@@ -21,6 +21,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import {AuthService} from './services/auth.service';
 import {AuthGuardService} from './services/auth-guard.service';
+import {UserService} from './services/user.service';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {AuthGuardService} from './services/auth-guard.service';
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
