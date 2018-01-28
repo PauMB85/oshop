@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -19,6 +19,10 @@ import { AdminProductsComponent } from './components/admin/admin-products/admin-
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import {AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
+import {AuthService} from './services/auth.service';
+import {AuthGuardService} from './services/auth-guard.service';
+import {UserService} from './services/user.service';
+import {AdminAuthGuardService} from './services/admin-auth-guard.service';
 
 
 @NgModule({
@@ -43,7 +47,12 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    UserService,
+    AuthGuardService,
+    AdminAuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
